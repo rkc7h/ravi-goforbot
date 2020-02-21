@@ -1,0 +1,16 @@
+AdminUsers: [ "rkc7h" ]
+ProtocolConfig:
+  MaxMessageSplit: {{ env "GOPHER_SLACK_MAX_MSGS" | default "2" }}
+  SlackToken: xoxb-{{ decrypt "gGaPlhLmR9eBdXz4141RAPxy1KMdV+Ol0T2Hu48FV12Ntnjh8RQ3cay5N3ihVG/KCBy531XwrtpOrDTNFsN2skeAAjZjLgRCUDA/PYPl" }}
+
+DefaultChannels: [ "general", "random" ]
+
+UserRoster:
+  - UserName: rkc7h
+    UserID: UG8KE7LAJ
+  # - UserName: floyd
+  #   UserID: U138KTVCL
+  #   BotUser: true
+        
+{{ $defaultjobchannel := "robots" }}
+DefaultJobChannel: {{ env "GOPHER_JOBCHANNEL" | default $defaultjobchannel }}
